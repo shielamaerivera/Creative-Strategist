@@ -10,6 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+/* ═══════════════════════════════════════════════════════════
+   SHIELA MAE RIVERA · Amazon Growth Creative Strategist
+   Consolidated Stylesheet — one block
+   ═══════════════════════════════════════════════════════════ */
+
 :root{
     --bg:#050505;
     --soft:#f5f1e8;
@@ -1458,7 +1463,6 @@ body{
 }
 
 
-
 /* ── PREMIUM COLOR HIERARCHY REFINEMENT ──
    Typography sizes and font family are intentionally unchanged.
    This layer improves color placement, contrast, highlight separation,
@@ -1783,9 +1787,8 @@ details,
     border-color:rgba(255,255,255,.28);
     background:rgba(255,255,255,.06);
 }
-</style>
 
-<style>
+/* ── SERVICE PRICE PACKAGES ────────────────────────────────── */
 /* Service Price Packages */
 .price-packages-section{
   background:#FFFDF8;
@@ -1933,33 +1936,9 @@ details,
     padding:28px;
   }
 }
-</style>
 
-
-<style>
-/* Final package tab, subtle pricing, and footer position refinement */
-html, body{
-  min-height:100%;
-}
-
-body{
-  min-height:100vh !important;
-  display:flex !important;
-  flex-direction:column !important;
-}
-
-body > section,
-body > div,
-body > header,
-body > footer{
-  flex-shrink:0;
-}
-
-.footer{
-  margin-top:auto !important;
-  width:100% !important;
-}
-
+/* ── PACKAGE TABS & PRICE OVERRIDES ───────────────────────── */
+/* ── PACKAGE TAB NAVIGATION ── */
 .package-tab-row{
   display:inline-flex;
   gap:8px;
@@ -1999,6 +1978,7 @@ body > footer{
   color:#FFFFFF !important;
 }
 
+/* Price range + note overrides */
 .price-range{
   font-size:19px !important;
   line-height:1.25 !important;
@@ -2022,6 +2002,11 @@ body > footer{
   font-size:13px !important;
 }
 
+/* Amazon update section spacing */
+.amazon-update-section{
+  padding-bottom:0 !important;
+}
+
 @media(max-width:640px){
   .package-tab-row{
     display:flex;
@@ -2034,34 +2019,125 @@ body > footer{
     width:100%;
   }
 }
-</style>
 
 
-<style>
-html, body{
-    min-height:100%;
+/* ═══════════════════════════════════════════════════════════
+   AGENCY-LEVEL VISUAL POLISH + STRUCTURE REPAIR
+   Keeps existing typography family while improving hierarchy,
+   spacing, contact formatting, premium contrast, and responsive flow.
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --agency-ink:#101828;
+  --agency-navy:#111827;
+  --agency-blue:#25364D;
+  --agency-slate:#475467;
+  --agency-muted:#667085;
+  --agency-gold:#B98246;
+  --agency-cream:#F7F3EC;
+  --agency-warm:#FFFCF6;
+  --agency-card:#FFFFFF;
+  --agency-line:rgba(16,24,40,.12);
+  --agency-shadow:0 24px 80px rgba(16,24,40,.10);
+  --agency-shadow-soft:0 14px 40px rgba(16,24,40,.07);
 }
-
 body{
-    display:block !important;
-    min-height:auto !important;
+  background:
+    radial-gradient(circle at 12% 6%, rgba(185,130,70,.12), transparent 28%),
+    radial-gradient(circle at 86% 2%, rgba(37,54,77,.10), transparent 30%),
+    var(--agency-cream);
+  color:var(--agency-ink);
 }
+.container{width:min(1180px,calc(100% - 48px));}
+.announcement{background:linear-gradient(90deg,#111827 0%,#25364D 58%,#B98246 100%);color:#fff;border:0;}
+.announcement a{color:#fff;text-decoration:none;}
+.nav{background:rgba(255,252,246,.88);backdrop-filter:blur(20px);box-shadow:0 16px 48px rgba(16,24,40,.07);}
+.nav-inner{height:84px;}
+.brand{color:var(--agency-navy);}
+.brand small{color:var(--agency-gold);font-weight:800;}
+.nav-links{gap:22px;}
+.nav-links a:not(.btn){color:#344054;font-weight:700;}
+.nav-links a:not(.btn):hover{color:var(--agency-gold);}
+.btn{border-radius:999px;letter-spacing:-.01em;}
+.btn-primary,.btn-dark{background:linear-gradient(135deg,#111827,#25364D);color:#fff !important;box-shadow:0 14px 32px rgba(17,24,39,.20);}
+.btn-primary:hover,.btn-dark:hover{transform:translateY(-1px);opacity:1;box-shadow:0 18px 42px rgba(17,24,39,.24);}
+.btn-outline{background:rgba(255,255,255,.70);border:1px solid rgba(17,24,39,.18);color:#111827;}
+.btn-outline:hover{background:#fff;border-color:rgba(185,130,70,.50);color:#8C5F2E;}
+.hero{padding:112px 0 92px;background:linear-gradient(135deg,#FFFCF6 0%,#F7F3EC 48%,#EEF2F6 100%);position:relative;overflow:hidden;}
+.hero:before{content:"";position:absolute;inset:auto -12% -34% auto;width:620px;height:620px;background:radial-gradient(circle,rgba(185,130,70,.18),transparent 68%);pointer-events:none;}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(340px,.82fr);gap:58px;align-items:center;position:relative;z-index:1;}
+.hero h1{font-size:clamp(44px,6vw,82px);line-height:.92;letter-spacing:-.075em;max-width:960px;}
+.hero p,.lede{color:#4B5563;font-size:18px;line-height:1.75;}
+.hero-note{margin-top:26px;color:#667085;font-size:14px;max-width:740px;}
+.hero-panel{background:rgba(255,255,255,.78);border:1px solid rgba(16,24,40,.12);box-shadow:var(--agency-shadow);border-radius:32px;padding:34px;backdrop-filter:blur(18px);}
+.hero-panel h3{font-size:28px;line-height:1.1;letter-spacing:-.05em;color:var(--agency-navy);margin-bottom:24px;}
+.check-list{display:grid;gap:14px;}
+.check-item{display:grid;grid-template-columns:20px 1fr;gap:12px;color:#475467;font-size:14px;line-height:1.55;}
+.box{width:20px;height:20px;border-radius:7px;background:linear-gradient(135deg,#B98246,#E8C08B);box-shadow:0 8px 18px rgba(185,130,70,.20);}
+section{padding:112px 0;}
+section:not(.hero):not(.black):not(.dark):not(.cta):not(.contact-section):not(.price-packages-section){background:rgba(255,252,246,.46);}
+h2,.section-title{letter-spacing:-.065em;color:var(--agency-navy);}
+.section-copy,.section-lede{color:#566170;}
+.eyebrow{color:#9A642D !important;letter-spacing:.18em;}
+.proof-strip{background:#fff;border-top:1px solid var(--agency-line);border-bottom:1px solid var(--agency-line);box-shadow:0 16px 50px rgba(16,24,40,.04);}
+.proof-grid{grid-template-columns:repeat(6,1fr);gap:0;}
+.proof-item{padding:24px 20px;border-left:1px solid var(--agency-line);}
+.proof-item:first-child{border-left:0;}
+.proof-item strong{font-size:34px;color:var(--agency-navy);}
+.two-col{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:start;}
+.timeline{display:grid;gap:16px;}
+.timeline-item{background:#fff;border:1px solid var(--agency-line);box-shadow:var(--agency-shadow-soft);border-radius:24px;padding:26px;}
+.timeline-item small{display:block;color:#9A642D;text-transform:uppercase;letter-spacing:.16em;font-weight:900;font-size:11px;margin-bottom:8px;}
+.timeline-item h3{font-size:24px;letter-spacing:-.04em;color:var(--agency-navy);margin-bottom:8px;}
+.timeline-item p{color:#566170;font-size:14px;line-height:1.65;}
+.black,.dark,.problems-section,.fit-section,.testimonials-section,.cta{background:linear-gradient(135deg,#111827 0%,#1F2A37 56%,#25364D 100%) !important;color:#fff;position:relative;overflow:hidden;}
+.black:before,.dark:before,.problems-section:before,.fit-section:before,.testimonials-section:before,.cta:before{content:"";position:absolute;inset:-30% auto auto -10%;width:480px;height:480px;background:radial-gradient(circle,rgba(185,130,70,.18),transparent 70%);pointer-events:none;}
+.black .container,.dark .container,.problems-section .container,.fit-section .container,.testimonials-section .container,.cta .container{position:relative;z-index:1;}
+.black h2,.dark h2,.problems-section h2,.fit-section h2,.testimonials-section h2,.cta h2{color:#fff !important;}
+.black .section-copy,.dark .section-copy,.problems-section .section-copy,.fit-section .section-copy,.testimonials-section .section-copy,.cta p{color:#D0D7E2 !important;}
+.card,.brand-card,.service-card,.case-card,.about-stat,.contact-panel,.compare-table,details,.price-card,.price-service-card{border-radius:28px;border:1px solid var(--agency-line);box-shadow:var(--agency-shadow-soft);background:#fff;}
+.card,.brand-card,.service-card,.price-card{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;}
+.card:hover,.brand-card:hover,.service-card:hover,.price-card:hover{transform:translateY(-3px);box-shadow:var(--agency-shadow);border-color:rgba(185,130,70,.30);}
+.problem-card,.offer,.fit-card,.testimonial-card,.work-card{background:rgba(255,255,255,.08) !important;border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 80px rgba(0,0,0,.18);backdrop-filter:blur(12px);}
+.problem-card .num,.problem-num{color:#DDB57F;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:900;margin-bottom:14px;}
+.problem-card h3,.offer h3,.fit-card h3,.testimonial-card strong,.work-body h3{color:#fff !important;}
+.problem-card p,.offer p,.offer li,.fit-card p,.testimonial-card p,.work-body p{color:#D0D7E2 !important;}
+.grid-3,.offer-grid,.work-grid,.fit-grid,.problems-grid,.systems-grid,.price-grid{gap:24px;}
+.about-section{background:linear-gradient(135deg,#FFFFFF 0%,#FFFCF6 100%);}
+.about-image{border-radius:34px;box-shadow:var(--agency-shadow);}
+.step{background:linear-gradient(135deg,#fff 0%,#EEF2F6 100%);border:1px solid var(--agency-line);box-shadow:var(--agency-shadow-soft);}
+.price-packages-section{background:linear-gradient(180deg,#FFFCF6 0%,#F3EFE7 100%);padding:112px 0;border-top:1px solid var(--agency-line);border-bottom:1px solid var(--agency-line);}
+.price-packages-intro .section-copy{margin-left:auto;margin-right:auto;}
+.price-card{position:relative;overflow:hidden;}
+.price-card:before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:linear-gradient(90deg,#B98246,#25364D);}
+.price-card.featured{background:linear-gradient(135deg,#111827,#25364D);border-color:#25364D;transform:translateY(-8px);}
+.price-card.featured h3,.price-card.featured .price-range{color:#fff !important;}
+.price-card.featured p,.price-card.featured li,.price-card.featured .price-note{color:#D0D7E2 !important;}
+.more-services-section{background:#FFFFFF !important;}
+.amazon-update-section{background:linear-gradient(135deg,#F7F5F2,#FFFFFF) !important;}
+.contact-section{background:linear-gradient(135deg,#111827 0%,#25364D 58%,#B98246 140%);color:#fff;padding:112px 0;position:relative;overflow:hidden;}
+.contact-section:before{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 68%);}
+.contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:start;position:relative;z-index:1;}
+.contact-section h2{color:#fff !important;}
+.contact-section .lede{color:#D0D7E2;}
+.contact-section .btn-outline{color:#fff;border-color:rgba(255,255,255,.34);background:rgba(255,255,255,.08);}
+.contact-panel{padding:38px;background:rgba(255,255,255,.96);border-color:rgba(255,255,255,.35);box-shadow:0 28px 100px rgba(0,0,0,.22);}
+.contact-panel h3{font-size:34px;color:#111827;margin-bottom:10px;}
+.contact-panel p{color:#566170;}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:26px;}
+.form-grid .full{grid-column:1 / -1;}
+label{display:block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#344054;margin-bottom:8px;}
+input,select,textarea{width:100%;border:1px solid rgba(16,24,40,.14);border-radius:16px;padding:15px 16px;background:#F9FAFB;color:#101828;font-family:inherit;font-size:14px;outline:none;transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;}
+textarea{min-height:132px;resize:vertical;}
+input:focus,select:focus,textarea:focus{background:#fff;border-color:#B98246;box-shadow:0 0 0 4px rgba(185,130,70,.14);}
+.footer{background:#0B1220;color:#D0D7E2;border-top:0;padding:64px 0 34px;}
+.footer-brand strong,.footer-col strong{color:#fff;}
+.footer p,.footer a{color:#B7C0CD;}
+.footer a:hover{color:#E8C08B;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.10);}
+.footer-bottom p{color:#8D99AA;}
+@media(max-width:1100px){.hero-grid,.two-col,.contact-grid{grid-template-columns:1fr;}.proof-grid{grid-template-columns:repeat(3,1fr);}.hero-panel{max-width:720px;}}
+@media(max-width:760px){.container{width:min(100% - 30px,1180px)}.hero{padding:86px 0 70px}.hero h1{font-size:42px}.proof-grid,.grid-3,.offer-grid,.work-grid,.fit-grid,.problems-grid,.systems-grid,.price-grid,.form-grid{grid-template-columns:1fr}.proof-item{border-left:0;border-top:1px solid var(--agency-line)}.proof-item:first-child{border-top:0}.contact-panel{padding:26px}.nav-inner{height:72px}}
 
-.footer{
-    margin-top:0 !important;
-    position:relative !important;
-    bottom:auto !important;
-    width:100%;
-}
-
-.amazon-update-section{
-    padding-bottom:0 !important;
-}
-
-.footer{
-    background:#F7F5F2 !important;
-    border-top:1px solid rgba(31,42,55,.10);
-}
 </style>
 
 </head>
@@ -2089,62 +2165,63 @@ body{
   <a href="#work">Case Studies</a>
   <a href="#testimonials">Testimonials</a>
   <a href="#process">Process</a>
-  <a class="btn btn-primary" href="#contact" style="color:#FFFFFF;"font-size:13px;min-height:42px;padding:0 18px;"color:#FFFFFF;">Contact</a>
+  <a class="btn btn-primary" href="#contact" style="color:#FFFFFF;font-size:13px;min-height:42px;padding:0 18px;">Contact</a>
 </nav>
 </div>
-</headern
+</header>
 
-<!-- HERO -->
 <section class="hero" id="top">
-<div class="container">
-  <div class="eyebrow">PDP Strategy · Premium A+ · Brand Story · Storefront Architecture · Catalog Systems</div>
-
-  <h1>
-    Amazon PDP Systems Built for Conversion, Catalog Consistency, and Shopper Clarity
-  </h1>
-
-  <p>
-    I help Amazon agencies, marketplace teams, and founder-led brands improve PDP image galleries, Premium A+ Content, Brand Story, Storefronts, and multi-ASIN content systems through Amazon-native strategy and hands-on execution.
-  </p>
-
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="#contact">Request a PDP Content Review</a>
-    <a class="btn btn-outline" href="#work">View Case Studies</a>
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Amazon AI-Commerce · PDP Systems · Premium A+ · Storefront Architecture</div>
+      <h1>Amazon changed. Has your content?</h1>
+      <p class="lede">Amazon content built for 2023 is not automatically ready for 2026. Alexa Shopping, conversational discovery, contextual product matching, and AI-assisted recommendations are changing how products get understood, compared, and surfaced.</p>
+      <p class="lede">I help Amazon brands, agencies, and marketplace operators rebuild PDP image galleries, Premium A+, Brand Story, Storefronts, and catalog content systems for shopper clarity, conversion, and AI-commerce readiness.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Get an AI-Commerce Content Review</a>
+        <a class="btn btn-outline" href="#work">View Case Studies</a>
+      </div>
+      <div class="hero-note">Built for founder-led brands, Amazon-native operators, marketplace teams, and agencies managing content refresh projects.</div>
+    </div>
+    <aside class="hero-panel">
+      <h3>Is your Amazon content still built like a design project?</h3>
+      <div class="check-list">
+        <div class="check-item"><span class="box"></span><span>Gallery images look polished, but do not answer shopper questions in the right order.</span></div>
+        <div class="check-item"><span class="box"></span><span>Premium A+ repeats product features instead of improving understanding and trust.</span></div>
+        <div class="check-item"><span class="box"></span><span>Storefronts show the brand, but do not guide customers toward the right product path.</span></div>
+        <div class="check-item"><span class="box"></span><span>Catalog messaging changes across ASINs, variants, bundles, and product families.</span></div>
+      </div>
+    </aside>
   </div>
-</div>
 </section>
 
-<!-- PROOF STRIP -->
 <div class="proof-strip" id="proof">
-<div class="container proof-grid">
-
-  <div class="proof-item">
-    <strong>9+</strong>
-    <span>Years specialized Amazon marketplace experience across Seller &amp; Vendor Central</span>
+  <div class="container proof-grid">
+    <div class="proof-item"><strong>9+</strong><span>Years specialized Amazon marketplace content experience</span></div>
+    <div class="proof-item"><strong>200+</strong><span>Amazon brands supported across agencies, distributors, and sellers</span></div>
+    <div class="proof-item"><strong>40K+</strong><span>ASIN catalog exposure where structure and consistency matter</span></div>
+    <div class="proof-item"><strong>SC + VC</strong><span>Seller Central and Vendor Central experience</span></div>
+    <div class="proof-item"><strong>100+</strong><span>Brand portfolios supported inside agency environments</span></div>
+    <div class="proof-item"><strong>30-50%</strong><span>Sales-growth contribution cited across selected Amazon content projects</span></div>
   </div>
-
-  <div class="proof-item">
-    <strong>15+</strong>
-    <span>Years in branding, product development &amp; international manufacturing</span>
-  </div>
-
-  <div class="proof-item">
-    <strong>200+</strong>
-    <span>Brands supported across agencies, distributors &amp; DTC sellers</span>
-  </div>
-
-  <div class="proof-item">
-    <strong>40K+</strong>
-    <span>ASIN catalog exposure where structure, consistency, and speed matter</span>
-  </div>
-
-  <div class="proof-item">
-    <strong>30–50%</strong>
-    <span>Sales-growth contribution across selected Amazon content improvement projects</span>
-  </div>
-
 </div>
-</div>
+
+<section id="changed">
+  <div class="container two-col">
+    <div>
+      <div class="eyebrow">Amazon Has Changed</div>
+      <h2>Traditional listing optimization is no longer enough.</h2>
+      <p class="lede">For years, Amazon content was mainly built around search visibility, mobile readability, and conversion. Those fundamentals still matter. The shift is that Amazon is increasingly helping shoppers discover, compare, summarize, and evaluate products through AI-assisted shopping experiences.</p>
+      <p class="lede">The next evolution of Amazon content is not more decoration. It is clearer product understanding.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item"><small>Stage 1</small><h3>Human Shopping</h3><p>Content needed to help shoppers understand benefits, specs, use cases, comparison points, and trust signals.</p></div>
+      <div class="timeline-item"><small>Stage 2</small><h3>Search Optimization</h3><p>Listings evolved around keywords, search intent, backend terms, category relevance, and title structure.</p></div>
+      <div class="timeline-item"><small>Stage 3</small><h3>Mobile Optimization</h3><p>Image galleries, A+, and Storefronts needed faster scanning, stronger hierarchy, and clearer visual sequencing.</p></div>
+      <div class="timeline-item"><small>Stage 4</small><h3>AI Optimization</h3><p>Content must now support product understanding, customer questions, conversational discovery, recommendation context, and attribute clarity.</p></div>
+    </div>
+  </div>
+</section>
 
 <!-- TRUSTED BRAND EXPERIENCE -->
 <section class="black center">
@@ -2170,8 +2247,25 @@ body{
     <span class="chip">Herbalogic</span>
     <span class="chip">Velocity Sellers <span style="opacity:.5;font-size:11px;margin-left:4px;">100+ Brands</span></span>
   </div>
+</section>
 
-</div>
+<section class="dark" id="underperform">
+  <div class="container">
+    <div class="eyebrow">Why Most Amazon Content Underperforms</div>
+    <h2>Most Amazon content problems are not design problems alone.</h2>
+    <p class="section-copy" style="margin-left:0">A PDP can look polished and still fail to communicate value. The problem is usually structure, sequencing, education, hierarchy, and decision support.</p>
+    <div class="grid-3">
+      <div class="problem-card"><div class="num">Problem 01</div><h3>Too much text</h3><p>Dense copy slows comprehension and forces shoppers to work too hard before they understand the product.</p></div>
+      <div class="problem-card"><div class="num">Problem 02</div><h3>Poor mobile readability</h3><p>Content that works on desktop often breaks on mobile, where most shoppers scan instead of read.</p></div>
+      <div class="problem-card"><div class="num">Problem 03</div><h3>Weak product education</h3><p>Features are shown, but customer questions, use cases, objections, and comparison points remain unresolved.</p></div>
+      <div class="problem-card"><div class="num">Problem 04</div><h3>Missing purchase confidence</h3><p>The content does not reduce uncertainty around fit, quality, performance, usage, or value.</p></div>
+      <div class="problem-card"><div class="num">Problem 05</div><h3>Inconsistent catalog systems</h3><p>Different layouts, copy styles, and standards across ASINs make the brand feel less established.</p></div>
+      <div class="problem-card"><div class="num">Problem 06</div><h3>Generic Premium A+</h3><p>A+ repeats bullets instead of deepening trust, explaining value, and supporting the buying decision.</p></div>
+      <div class="problem-card"><div class="num">Problem 07</div><h3>Weak product differentiation</h3><p>The listing explains what the product has, but not why a customer should choose it over alternatives.</p></div>
+      <div class="problem-card"><div class="num">Problem 08</div><h3>Built for Amazon 2023</h3><p>Old gallery flows and decorative A+ do not support modern browsing, comparison, and AI-assisted shopping behavior.</p></div>
+      <div class="problem-card"><div class="num">Problem 09</div><h3>Creative workflows that cannot scale</h3><p>Without briefs, templates, QA rules, and content governance, teams move slower and revise more often.</p></div>
+    </div>
+  </div>
 </section>
 
 
@@ -2219,57 +2313,18 @@ body{
 </section>
 
 
-<!-- WHAT I FIX -->
-<section class="problems-section">
-<div class="container">
-  <div class="eyebrow">What I Fix</div>
-  <h2 style="color:white;max-width:760px;">
-    Most Amazon content problems are not design problems alone.
-  </h2>
-  <p class="section-copy">
-    A listing can look visually polished while still underperforming. If the page does not help shoppers quickly understand the product, compare options confidently, and move through the buying decision without friction, the content is limiting performance regardless of how it looks.
-  </p>
 
-  <div class="problems-grid">
-
-    <div class="problem-card">
-      <div class="problem-num">Problem 01</div>
-      <h3>Image galleries without decision flow</h3>
-      <p>The images hold up individually, but the sequence does not answer the shopper's questions in the right order.</p>
+<section id="cost">
+  <div class="container center">
+    <div class="eyebrow">The Cost of Doing Nothing</div>
+    <h2>Most brands do not lose overnight. They lose gradually.</h2>
+    <p class="section-copy">Outdated content quietly limits conversion, trust, and discoverability while competitors improve clarity, comparison support, and customer confidence.</p>
+    <div class="grid-3">
+      <div class="card"><span class="pill">Discoverability</span><h3>Reduced product understanding</h3><p>If Amazon and shoppers cannot easily understand what makes the product relevant, the listing has less working in its favor.</p></div>
+      <div class="card"><span class="pill">Conversion</span><h3>Lower buyer confidence</h3><p>Unanswered questions create hesitation. Hesitation creates drop-off, especially on mobile and paid traffic.</p></div>
+      <div class="card"><span class="pill">Competition</span><h3>Increased competitive risk</h3><p>Competitors with clearer galleries, stronger A+, and better Storefront flow can make your brand look dated even when your product is strong.</p></div>
     </div>
-
-    <div class="problem-card">
-      <div class="problem-num">Problem 02</div>
-      <h3>Premium A+ that repeats bullet points</h3>
-      <p>The A+ section restates features instead of deepening trust, explaining value, and handling objections.</p>
-    </div>
-
-    <div class="problem-card">
-      <div class="problem-num">Problem 03</div>
-      <h3>Storefronts that behave like brochures</h3>
-      <p>The storefront shows the brand but does not guide shoppers into the right product path or category decision.</p>
-    </div>
-
-    <div class="problem-card">
-      <div class="problem-num">Problem 04</div>
-      <h3>Paid traffic sent to weak PDPs</h3>
-      <p>Traffic can reach the listing, but weak PDP content fails to communicate value quickly enough to support conversion.</p>
-    </div>
-
-    <div class="problem-card">
-      <div class="problem-num">Problem 05</div>
-      <h3>Catalog inconsistency across ASINs</h3>
-      <p>Different layouts, copy styles, and visual standards make the brand feel less established than it actually is.</p>
-    </div>
-
-    <div class="problem-card">
-      <div class="problem-num">Problem 06</div>
-      <h3>Creative workflows that cannot scale</h3>
-      <p>Without briefs, rules, templates, and systematic processes, teams produce slower work with more revision cycles.</p>
-    </div>
-
   </div>
-</div>
 </section>
 
 <!-- FRAMEWORK: WHAT MAKES A PAGE CONVERT -->
@@ -2547,12 +2602,8 @@ body{
           </div>
         </div>
       </article>
-     </div>
-        </div>
-      </div>
     </div>
   </section>
-
 
 
 <!-- CLIENT TESTIMONIALS -->
@@ -2605,7 +2656,7 @@ body{
 </section>
 
 <!-- PROCESS -->
-<section id="process">
+<section id="process-overview">
 <div class="container center">
 
   <h2>How it works</h2>
@@ -2728,6 +2779,23 @@ body{
 
   </div>
 </div>
+</section>
+
+
+<section class="dark" id="process">
+  <div class="container center">
+    <div class="eyebrow">My Process</div>
+    <h2>A structured system for audit, strategy, execution, and scale.</h2>
+    <p class="section-copy">The process is designed for teams that need clarity before production, not endless design rounds.</p>
+    <div class="process-grid">
+      <div class="step"><div class="num">Step 1</div><h3>Audit</h3><p>Review PDPs, galleries, A+, Brand Story, Storefront flow, mobile readability, content gaps, and catalog inconsistencies.</p></div>
+      <div class="step"><div class="num">Step 2</div><h3>Prioritize</h3><p>Identify the highest-impact fixes based on shopper confusion, conversion friction, traffic value, and implementation effort.</p></div>
+      <div class="step"><div class="num">Step 3</div><h3>Strategy</h3><p>Define messaging hierarchy, image sequence, A+ structure, storefront navigation, and AI-commerce readiness opportunities.</p></div>
+      <div class="step"><div class="num">Step 4</div><h3>Content System Design</h3><p>Create repeatable frameworks for image stacks, Premium A+, Brand Story, catalog rules, and designer-ready briefs.</p></div>
+      <div class="step"><div class="num">Step 5</div><h3>Execution Support</h3><p>Support hands-on execution, creative direction, production QA, implementation notes, and stakeholder feedback.</p></div>
+      <div class="step"><div class="num">Step 6</div><h3>Performance Monitoring</h3><p>Review performance signals, shopper behavior, campaign needs, and ongoing content refresh priorities.</p></div>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
@@ -2914,129 +2982,30 @@ body{
 </div>
 </section>
 
-<!-- FAQ -->
-<section>
-<div class="container faq-grid">
-
-  <div>
-    <div class="eyebrow" style="color:var(--gold);">Common Questions</div>
-    <h2>Most common questions</h2>
-    <p class="section-copy" style="margin-left:0;margin-top:16px;">
-      Answers for brands, agencies, and marketplace teams considering Amazon content support.
-    </p>
-  </div>
-
-  <div class="faq-list">
-
-    <details>
-      <summary>Do you handle PPC?</summary>
-      <p>No. My specialization is Amazon content systems — Premium A+, image galleries, Brand Story, and Storefront UX. I can collaborate with PPC or SEO teams when needed, but I do not manage ads. Content strategy and execution is my focus.</p>
-    </details>
-
-    <details>
-      <summary>Do you create videos?</summary>
-      <p>No video production is included. Existing video assets can be integrated strategically into the content system and Storefront where applicable.</p>
-    </details>
-
-    <details>
-      <summary>Can you support large catalogs?</summary>
-      <p>Yes. I have experience supporting catalogs ranging from focused product lines to 40,000+ ASINs, building template logic and systems that maintain quality at scale.</p>
-    </details>
-
-    <details>
-      <summary>Can agencies hire you?</summary>
-      <p>Yes. I support Amazon agencies as a senior Amazon creative strategist — providing content direction, client-ready briefs, creative audits, and overflow execution support.</p>
-    </details>
-
-    <details>
-      <summary>Do you work on Vendor Central?</summary>
-      <p>Yes. I have direct experience across both Seller Central and Vendor Central environments, including compliance requirements, A+ approval workflows, and catalog standards specific to each platform.</p>
-    </details>
-
-    <details>
-      <summary>Are you available for full-time roles?</summary>
-      <p>Yes. I am open to both consulting engagements and full-time remote opportunities with Amazon agencies, brands, and marketplace operators. Serious inquiries can contact me directly for availability and role fit.</p>
-    </details>
-
-  </div>
-
-</div>
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact" class="contact-section">
-<div class="container contact-grid">
-
-  <div>
-    <div class="eyebrow">Contact / Consultation</div>
-
-    <h2>Ready to improve your Amazon conversion system?</h2>
-
-    <p class="section-copy" style="margin-left:0;">
-      Whether you need Premium A+, storefront optimization, catalog consistency, or conversion-focused image galleries, let’s identify the highest-impact next step.
-    </p>
-  </div>
-
-  <div class="contact-panel">
-
-    <h3>CONTACT</h3>
-
-    <p>
-  <strong>Shiela Mae Rivera</strong>
-</p>
-
-    <ul class="contact-list">
-
-      <li>
-        Email :
-        <a href="mailto:shieladesigns@gmail.com">
-          shieladesigns@gmail.com
-        </a>
-      </li>
-
-      <li>
-        Linkedin :
-        <a href="https://linkedin.com/in/shieladesigns" target="_blank">
-          linkedin.com/in/shieladesigns
-        </a>
-      </li>
-
-    </ul>
-
-    <div class="contact-actions">
-      <a class="btn btn-primary" href="mailto:shieladesigns@gmail.com">
-        Email Shiela
-      </a>
-
-      <a class="btn btn-outline" href="#work">
-        Review Case Studies
-      </a>
+<section id="faq">
+  <div class="container faq-grid">
+    <div><div class="eyebrow">FAQ</div><h2>Common questions</h2><p class="lede">Answers for founders, agencies, brand managers, and marketplace teams considering Amazon content support.</p></div>
+    <div class="faq-list">
+      <details open><summary>What is AI-commerce readiness?</summary><p>AI-commerce readiness refers to how clearly your Amazon content communicates product value, use cases, differentiation, attributes, and customer intent across search, recommendation systems, review summaries, conversational discovery, Alexa Shopping, and future AI-assisted experiences.</p></details>
+      <details><summary>Is AI-assisted shopping changing Amazon content requirements?</summary><p>Amazon fundamentals still matter, including clarity, conversion, compliance, and mobile readability. The shift is that structured product understanding, customer-question alignment, and clear differentiation are becoming more important as shopping becomes more AI-assisted.</p></details>
+      <details><summary>Do you handle PPC?</summary><p>No. I do not manage PPC campaigns. I support the customer-facing content layer that PPC traffic lands on, including PDP galleries, A+, Storefronts, Brand Story, and conversion messaging.</p></details>
+      <details><summary>Do you work with agencies?</summary><p>Yes. Agencies can use me as a senior content strategy and execution partner for content refreshes, client-ready briefs, catalog systems, Premium A+, Storefront structure, and overflow creative direction.</p></details>
+      <details><summary>Can you support large catalogs?</summary><p>Yes. I have worked across high-volume Amazon environments, including catalog exposure exceeding 40,000 ASINs, where consistency, templates, workflow, and content governance are critical.</p></details>
+      <details><summary>Do you execute content or only provide strategy?</summary><p>Both. Depending on the engagement, I can audit, plan, write content direction, structure modules, support design execution, review assets, and build reusable systems for your team.</p></details>
+      <details><summary>Are you available for full-time or long-term roles?</summary><p>Yes. I am open to full-time, long-term contract, fractional, agency partner, and project-based roles where Amazon content strategy and execution are central to the work.</p></details>
     </div>
-
   </div>
-
-</div>
 </section>
-<!-- FOOTER -->
+
 
 <section class="price-packages-section" id="pricing">
   <div class="container">
     <div class="price-packages-intro">
-    <div class="package-tab-row" aria-label="Service package tabs">
-      <a href="#packages" class="package-tab">View Packages</a>
-      <a href="#pricing" class="package-tab active">Service Prices</a>
-      <a href="#contact" class="package-tab">Request Consultation</a>
+      <div class="eyebrow">Pricing / Engagement Models</div>
+      <h2>Amazon content systems built by scope, not generic design packages.</h2>
+      <p class="section-copy">Choose the closest starting point. Final scope depends on ASIN count, variation complexity, current asset quality, compliance risk, and whether the project needs strategy, creative direction, or execution support.</p>
     </div>
-
-      <div class="eyebrow">Service Price Packages</div>
-      <h2>Clear starting investment ranges for Amazon content strategy, creative systems, and catalog support.</h2>
-      <p class="section-copy">
-        These pricing ranges are designed for founder-led brands, Amazon sellers, and growing eCommerce businesses that need senior-level Amazon content strategy without hiring a large agency.
-      </p>
-    </div>
-
-    <div class="price-grid">
+<div class="price-grid">
       <article class="price-card">
         <div class="price-label">Listing Refresh System</div>
         <h3>Regular A+ Optimization</h3>
@@ -3099,6 +3068,7 @@ body{
 </section>
 
 <!-- ADDITIONAL SERVICES -->
+
 <section class="section more-services-section" id="more-services">
   <div class="container">
     <div class="section-header center">
@@ -3117,7 +3087,6 @@ body{
     </div>
   </div>
 </section>
-
 
 
 <section class="amazon-update-section" style="background:#F7F5F2;padding:120px 0;border-top:1px solid #E5E7EB;border-bottom:1px solid #E5E7EB;">
@@ -3205,42 +3174,69 @@ body{
     </div>
 </section>
 
+
+<section class="contact-section" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="eyebrow">Contact / Strategy Call</div>
+      <h2>Let’s review your Amazon content system.</h2>
+      <p class="lede">Send your top ASIN, Amazon Storefront, or current content challenge. I will look for the highest-impact opportunities across PDP clarity, Premium A+, Storefront flow, catalog consistency, and AI-commerce readiness.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:shieladesigns@gmail.com?subject=Amazon%20AI-Commerce%20Content%20Review%20Request">Email Shiela</a>
+        <a class="btn btn-outline" href="https://linkedin.com/in/shieladesigns" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="contact-panel">
+      <h3>Request a content review</h3>
+      <p>Static form template. If you publish this on GitHub Pages, connect this form to Formspree, Netlify Forms, Tally, Typeform, or your preferred booking tool.</p>
+      <form action="mailto:shieladesigns@gmail.com" method="post" enctype="text/plain">
+        <div class="form-grid">
+          <div><label>Name</label><input type="text" name="name" placeholder="Your name"></div>
+          <div><label>Company</label><input type="text" name="company" placeholder="Brand or agency"></div>
+          <div><label>Website</label><input type="url" name="website" placeholder="https://"></div>
+          <div><label>Amazon Storefront or ASIN</label><input type="text" name="amazon_link" placeholder="Storefront URL or ASIN"></div>
+          <div><label>Number of ASINs</label><select name="asin_count"><option>1-5</option><option>6-25</option><option>26-100</option><option>100+</option><option>Agency portfolio</option></select></div>
+          <div><label>Biggest Challenge</label><select name="challenge"><option>Gallery content</option><option>Premium A+</option><option>Storefront</option><option>Catalog consistency</option><option>Conversion</option><option>AI-commerce readiness</option><option>Agency support</option><option>Other</option></select></div>
+          <div class="full"><label>Message</label><textarea name="message" placeholder="Briefly describe what you want reviewed."></textarea></div>
+          <div class="full"><button class="btn btn-primary" type="submit">Send Review Request</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
-<div class="container footer-grid">
-
-  <div class="footer-brand">
-    <strong>Shiela Mae Rivera</strong>
-    <p>Let’s build your Amazon brand into a conversion-focused marketplace system. For collaborations, consulting, or remote opportunities. Email me: shieladesigns@gmail.com</p>
-    <div style="margin-top:16px;">
-          </div>
-  </div>
-
-  <div class="footer-col">
-    <strong>Services</strong>
-    <a href="#services">Premium A+ Content</a>
-    <a href="#services">PDP Image Systems</a>
-    <a href="#services">Brand Story</a>
-    <a href="#services">Storefront UX</a>
-    <a href="#services">Catalog Systems</a>
-    <a href="#services">Agency Support</a>
-  </div>
-
-  <div class="footer-col">
-    <strong>Navigation</strong>
-    <a href="#proof">Proof</a>
-    <a href="#work">Case Studies</a>
-    <a href="#process">Process</a>
-    <a href="#services">Services</a>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <strong>Shiela Mae Rivera</strong>
+      <p>Amazon AI-Commerce Content Strategist helping brands build conversion-focused PDP systems, Premium A+, Brand Story, Storefront architecture, and catalog content systems. For collaborations, consulting, or remote opportunities, email me: shieladesigns@gmail.com</p>
+    </div>
+    <div class="footer-col">
+      <strong>Services</strong>
+      <a href="#services">AI-Commerce Content Audit</a>
+      <a href="#services">PDP Image Systems</a>
+      <a href="#services">Premium A+ Content</a>
+      <a href="#services">Brand Story</a>
+      <a href="#services">Storefront UX</a>
+      <a href="#services">Catalog Systems</a>
+      <a href="#services">Agency Support</a>
+    </div>
+    <div class="footer-col">
+      <strong>Navigation</strong>
+      <a href="#proof">Proof</a>
+      <a href="#changed">Amazon Has Changed</a>
+      <a href="#work">Case Studies</a>
+      <a href="#process-overview">Process</a>
+      <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
-
-</div>
-
-<div class="container footer-bottom">
-  <p>© 2026 Shiela Mae Rivera. All rights reserved.</p>
-  <p>Amazon Growth Creative Strategist · Seller Central · Vendor Central · Premium A+</p>
-</div>
+  <div class="container footer-bottom">
+    <p>© 2026 Shiela Mae Rivera. All rights reserved.</p>
+    <p>Amazon Growth Creative Strategist · Seller Central · Vendor Central · Premium A+</p>
+  </div>
 </footer>
 
 </body>
